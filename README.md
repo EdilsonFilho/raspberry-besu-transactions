@@ -43,12 +43,12 @@ pip list
 sudo nano .env
 ```
 ```sh
-WEB3_PROVIDER_URI=http://18.158.69.144:8545
+WEB3_PROVIDER_URI=http://XX.XXX.XX.XXX:8545
 SIGNER_LOCAL_PRIVATE_KEY=XXX
 SIGNER_LOCAL_ADDRESS=0x173F1569C2Cb4626Cc6f073E94b6183848efd153
 ```
 
-Notice: Where WEB3_PROVIDER_URI is the address of the HTTP RPC API, SIGNER_LOCAL_PRIVATE_KEY is the private key of our “Raspberry” account (which should be taken from MetaMask) and SIGNER_LOCAL_ADDRESS is the public address of the account. To extract the private key from MetaMask, first, select the desired account, and access “account details”, then click “export private key”. After confirming with our MetaMask password, we’ll get the key - just copy it and paste in place of “XXX” in the above `.env` file. 
+Notice: Where WEB3_PROVIDER_URI is the address of the HTTP RPC API (we're using port 8545), SIGNER_LOCAL_PRIVATE_KEY is the private key of our “Raspberry” account (which should be taken from MetaMask) and SIGNER_LOCAL_ADDRESS is the public address of the account. To extract the private key from MetaMask, first, select the desired account, and access “account details”, then click “export private key”. After confirming with our MetaMask password, we’ll get the key - just copy it and paste in place of “XXX” in the above `.env` file. 
 Remember to substitute public address and WEB3 provider as well!
 
 2- Application
@@ -58,7 +58,7 @@ Create the application:
 sudo nano required-imports.py
 ```
 Run
-``śh
+```sh
 python3 required-imports.py 
 ```
 ```sh
@@ -185,6 +185,18 @@ My genisis.json file:
   }
 }
 ```
+
+This is account 2 that I imported into metamask using data from gensis.json file. Note that the gensis.json file is in the documentation. In a professional project do not use these addresses and do not leave the addresses visible!
+
+![add net](/images/account2.jpg)
+
+
+Figure 1- Account 2 sent resources.
+
+![add net](/images/account3.jpg)
+
+
+Figure 2- Account 3 received funds.
 
 
 
